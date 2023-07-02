@@ -1,11 +1,12 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export default function Home() {
   return (
-    <div>
-      Home page
-      <button>Login</button>
-    </div>
+    <UserProvider>
+      <div>
+        Home page
+        <button>Login</button>
+      </div>
+    </UserProvider>
   );
 }
