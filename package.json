@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:ci": "next start -p 4000",
+    "test:functional": "cypress open --env HOST_URL=http://localhost:3000",
+    "test:functional:ci": "cypress run --env HOST_URL=http://localhost:4000",
+    "audit": "pnpm audit --audit-level=low",
+    "test": "vitest",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "vitest": "^0.32.2"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "cypress": "^12.16.0",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.7",
+    "prettier": "2.8.8",
+    "typescript": "5.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "semver": "^7.5.2"
+    }
+  }
+}
